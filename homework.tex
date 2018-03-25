@@ -1,0 +1,113 @@
+\documentclass[a4paper]{article}
+%\usepackage[scheme = plain]{ctex} %调用 xeCJK 宏包，启用中文支持
+%   \setCJKmainfont{SimSun} %设置 CJK 主字体为 SimSun （宋体）
+
+
+\usepackage{float}
+\usepackage{amsmath}    %数学宏包
+\usepackage{amstext}    %在数学公式中插入少量文本
+\usepackage{amsthm}    %排版定理和证明
+\usepackage{amsfonts}
+\usepackage{siunitx}    %国际单位制宏包
+\usepackage{geometry}    %页边距
+\usepackage{titling}    %标题自定义
+\usepackage{fancyhdr}    %页眉页脚
+%\usepackage{microtype}  %调整局部字间距,不兼容 xelatex
+
+%文档基本样式
+\oddsidemargin=0.35in
+\textwidth=6in
+\textheight=9in
+\setlength{\parskip}{1em}
+%文档基本样式
+
+%作业相关信息
+\newcommand{\HomeworkTitle}{Homework \#1}
+\newcommand{\DueDate}{Mar 27, 2018}
+\newcommand{\Class}{High Energy Astrophysics}
+\newcommand{\ClassInstructor}{Professor Edwin Hubble}
+\newcommand{\AuthorName}{Xiaoming Li}
+\newcommand{\AuthorScholar}{110159753951}
+%作业相关信息
+
+%标题页
+\title{
+    \vspace{1.5in}
+    \LARGE{\textbf{\Class: \HomeworkTitle}}\\
+    \normalsize\vspace{0.1in}\large{Due on \DueDate}\\
+    \vspace{0.08in}\large{\textsc{\ClassInstructor}}
+    \vspace{4.5in}
+    }
+
+\author{
+    \Large{\textsc{\AuthorName}}\\
+    \vspace{0.2in}\large{\textrm{\AuthorScholar}}
+    }
+
+\date{}
+%标题页
+
+%页眉页脚
+\pagestyle{fancy}
+\chead{\Class: \HomeworkTitle}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+%页眉页脚
+
+%自定义
+\newcommand{\problem}[1]{\addtolength\parskip{3em}\noindent\textbf{\Large{#1}}\addtolength\parskip{-3em}}
+\newcommand{\solution}{\noindent\textsl{\large{Solution:}}}
+
+%数学符号
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}}
+
+\begin{document}
+
+
+\begin{titlepage}
+\maketitle
+\thispagestyle{empty}
+\end{titlepage}
+
+\problem{1. Special relativity}
+
+\solution
+
+The muons in this problem produced at a height of $H=\SI{6}{\kilo\meter}$, after $t_a=\frac{H}{v}$ arrived Earth's surface. It means the lifetime of them should longer than $t_a$ :
+\[
+t_{\textrm{life}}\geq t_a
+\]
+
+According to the theory of special relativity, this particles should have a longer lifetime if they are measured by the observer which on the Earth's surface. And their lifetime are given by the Lorentz transformation :
+\[
+t_{\textrm{life}}=\gamma  t_{\textrm{rest}} =\frac{t_{\textrm{rest}}}{\sqrt{1-\frac{v^2}{c^2}}}
+\]
+where $v$ is the relative velocity between frames, $c$ is the speed of light, and $\gamma$ is the Lorentz factor.
+
+For a relativistic particle, the relationship of its mass and Lorentz factor is:
+\[
+E=\gamma mc^2
+\]
+where $m$ is the invariant mass.
+
+By the above formula we have:
+\[
+\gamma\geq\sqrt{\frac{H^2}{c^2t_{\textrm{rest}}^2}+1}
+\]
+
+In this problem, $mc^2=\SI{105}{\mega\electronvolt}$, $t_{\textrm{rest}}=\SI{2200}{\nano\second}$. Hence the lower limit of the total energy of the muons in this case is:
+\[\begin{aligned}
+E_{\textrm{lower limit}}&=\gamma mc^2 \\
+&= m c^2 \sqrt{\frac{H^2}{c^2t_{\textrm{rest}}^2} + 1} \\
+& \approx \SI{105}{\mega\electronvolt} \times 9.15 \\
+& \approx \SI{961}{\mega\electronvolt}
+\end{aligned}
+\]
+
+
+\problem{2. Blackbody radiation}
+
+Example Example Example Example Example 
+
+\end{document} 
