@@ -1,1 +1,1 @@
-# LaTex-HomeWork-Template
+# TeX-HomeWork-Template
